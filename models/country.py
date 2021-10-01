@@ -24,7 +24,7 @@ class Country(db.Model):
     def data(self):
         return {
             "continent_id": self.continent_id,
-            "country_id:": self.country_id,
+            "country_id": self.country_id,
             "country_name": self.country_name,
             "pop_size": self.pop_size
 

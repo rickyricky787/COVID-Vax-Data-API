@@ -16,7 +16,7 @@ class Continent(db.Model):
     def data(self):
         return {
             "continent_id": self.continent_id,
-            "continent_name:": self.continent_name
+            "continent_name": self.continent_name
         }
     
     def id(self):

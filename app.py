@@ -1,8 +1,10 @@
-from flask import Flask
+from flask import Flask,  render_template
 from flask_restful import Api
 
 from config import Config
 from extensions import db
+
+import requests
 
 from resources.continent import ContinentResource, ContinentIdResource
 from resources.country import CountryResource, CountryIdResource
@@ -49,6 +51,24 @@ app.config.from_object(Config)
 
 register_extensions(app)
 register_resources(app)
+
+@app.route("/", methods=["GET"])
+def index():
+    country_data = requests.get("https://covid-vax-data-api.herokuapp.com/country").json()
+    country_list = []
+    for country in country_data["data"]:
+        country_list.append(country["country_name"])
+    
+    vaccine_data = requests.get("https://covid-vax-data-api.herokuapp.com/vaccine").json()
+    vaccine_list = []
+    for vaccine in vaccine_data["data"]:
+        vaccine_list.append(vaccine["vaccine_name"])
+
+    return render_template(
+        "home.html", 
+        country_list=country_list,
+        vaccine_list=vaccine_list
+        )
 
 if __name__ == "__main__":
     app.run()

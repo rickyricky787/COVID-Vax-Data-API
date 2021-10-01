@@ -18,7 +18,7 @@ class TotalVaccinationByBrand(db.Model):
     def data(self):
         return {
             "date_id": self.date_id,
-            "date_recorded:": self.date_recorded.isoformat(),
+            "date_recorded": self.date_recorded.isoformat(),
             "vaccination_total": self.vaccination_total,
             "country_id": self.country_id,
             "vaccine_id": self.vaccine_id

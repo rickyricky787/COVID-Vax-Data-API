@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome file</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="covid-vax-data-api">COVID Vax Data API</h1>
+<p>This is a demo API. The data used comes from <a href="https://github.com/owid/covid-19-data">Our World In Data</a>. The data was cleaned, normalized, and added to a database in order to create this API. The data used for this API represents global COVID-19 and vaccination data. The data in this API is automatically updated daily.</p>
+<h2 id="routes">Routes</h2>
+
+<table>
+<thead>
+<tr>
+<th>HTTP Verb</th>
+<th>Description</th>
+<th>Route</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td>Get all continent data</td>
+<td>/continent</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Get continent data by id</td>
+<td>/continent/id/&lt;continent_id&gt;</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Get all country data</td>
+<td>/country</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Get country data by id</td>
+<td>/country/id//&lt;country_id&gt;</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Get all global COVID-19 data</td>
+<td>/covid-data</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Get a country’s COVID-19 data</td>
+<td>/covid-data/country/&lt;country_name&gt;</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Get the latest COVID-19 data from all countries</td>
+<td>/covid-data/latest</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Get the latest COVID-19 data of a specific country</td>
+<td>/covid-data/latest/&lt;country_name&gt;</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Get all daily vaccination data</td>
+<td>/daily-vax</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Get the daily vaccination data of a specific country</td>
+<td>/daily-vax/country/&lt;country_name&gt;</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Get the latest vaccination data for all countries</td>
+<td>/daily-vax/latest</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Get the latest vaccination data for a specific country</td>
+<td>/daily-vax/latest/&lt;country_name&gt;</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Get the total number of vaccines administered (at least one dose) per brand globally</td>
+<td>/total-vax-brand</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Get the total number of vaccines administered (at least one dose) per brand for a specific country</td>
+<td>/total-vax-brand/country/&lt;country_name&gt;</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Get all the vaccine brands available in every country</td>
+<td>/vax-in-country</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Get all the vaccine brands available in a specific country</td>
+<td>/vax-in-country/country/&lt;country_name&gt;</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Get all the vaccine brands available in every country</td>
+<td>/vax-in-country/vaccine/&lt;vaccine_name&gt;</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Get all vaccine data</td>
+<td>/vaccine</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Get vaccine data by id</td>
+<td>/vaccine/id/&lt;vaccine_id&gt;</td>
+</tr>
+</tbody>
+</table><h2 id="available-countries">Available Countries</h2>
+<p>
+{{ country_list[0] }}
+{% for country in country_list[1:] %}
+  {{ " - " + country}}
+{% endfor %}
+</p>
+<h2 id="available-vaccine-brands">Available Vaccine Brands</h2>
+<p>
+{{ vaccine_list[0] }}
+{% for vaccine in vaccine_list[1:] %}
+  {{ " - " + vaccine}}
+{% endfor %}
+</p>
+<h2 id="source-code">Source Code</h2>
+<p><a href="https://github.com/rickyricky787/COVID-Vax-Data-API">Github</a></p>
+</div>
+</body>
+
+</html>

@@ -14,7 +14,7 @@ class Vaccine(db.Model):
     def data(self):
         return {
             "vaccine_id": self.vaccine_id,
-            "vaccine_name:": self.vaccine_name
+            "vaccine_name": self.vaccine_name
         }
     
     def id(self):

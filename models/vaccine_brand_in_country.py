@@ -16,7 +16,7 @@ class VaccineBrandInCountry(db.Model):
     def data(self):
         return {
             "id": self.id,
-            "country_id:": self.country_id,
+            "country_id": self.country_id,
             "vaccine_id": self.vaccine_id
         }
     
