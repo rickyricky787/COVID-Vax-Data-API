@@ -44,15 +44,11 @@ def register_resources(app):
     api.add_resource(VaccineResource, "/vaccine")
     api.add_resource(VaccineIdResource, "/vaccine/id/<int:vaccine_id>")
 
-def create_app():
-    app = Flask(__name__)
-    app.config.from_object(Config)
+app = Flask(__name__)
+app.config.from_object(Config)
 
-    register_extensions(app)
-    register_resources(app)
-
-    return app
+register_extensions(app)
+register_resources(app)
 
 if __name__ == "__main__":
-    app = create_app()
     app.run()
