@@ -1,0 +1,9 @@
+cryptography
+flask
+Flask-RESTful
+Flask-SQLAlchemy
+Flask-Migrate
+httpie
+passlib
+pymysql
+python-dotenv
