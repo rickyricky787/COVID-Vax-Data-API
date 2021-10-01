@@ -3,6 +3,7 @@ flask
 Flask-RESTful
 Flask-SQLAlchemy
 Flask-Migrate
+gunicorn
 httpie
 passlib
 pymysql
