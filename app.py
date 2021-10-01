@@ -22,7 +22,7 @@ def register_resources(app):
     api.add_resource(ContinentIdResource, "/continent/id/<int:continent_id>")
 
     api.add_resource(CountryResource, "/country")
-    api.add_resource(CountryIdResource, "/country/id//<int:country_id>")
+    api.add_resource(CountryIdResource, "/country/id/<int:country_id>")
 
     api.add_resource(CovidDataResource, "/covid-data")
     api.add_resource(CountryCovidDataResource, "/covid-data/country/<string:country_name>")
