@@ -12,5 +12,5 @@ API homepage: https://covid-vax-data-api.herokuapp.com/
 - Frontend: HTML, CSS (Used stackedit.io to create home page)
 - Backend: Python (Flask), AWS RDS (MySQL)
 - Data Analysis Tools: Pandas, Numpy (Used for cleaning and normalizing data)
-- AWS Lambda used to auto scrape data from source, normalize data, and update the database daily.
+- AWS Lambda previously used to auto scrape data from source, normalize data, and update the database daily.
 - Deployed on Heroku
